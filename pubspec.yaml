@@ -1,0 +1,47 @@
+name: rugby_club_app
+description: Application du RC Lucciana
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  url_launcher: ^6.3.0
+  http: ^1.2.2
+  html: ^0.15.4
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.6
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/sponsors/
+    - assets/images/logo.png
+    - assets/images/logo_circle.png
+
+flutter_native_splash:
+  color: "#B71C1C"
+  image: assets/images/logo.png   # logo complet (iOS + Android <12)
+  android_12:
+    color: "#B71C1C"
+    image: assets/images/logo_circle.png   # version ronde spéciale Android 12
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo_circle.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#B71C1C"   # fond rouge club
+  adaptive_icon_foreground: "assets/images/logo_circle.png"
