@@ -8,7 +8,6 @@ class ClubScaffold extends StatelessWidget {
   final PreferredSizeWidget? bottom; // pour injecter un TabBar
 
   const ClubScaffold({
-    // 👈 const ici
     super.key,
     required this.selectedIndex,
     required this.title,
@@ -17,11 +16,13 @@ class ClubScaffold extends StatelessWidget {
   });
 
   static const List<String> _routes = [
-    '/',
-    '/news',
-    '/calendar',
-    '/school',
-    '/sponsors',
+    '/', // 0 = Accueil
+    '/news', // 1
+    '/calendar', // 2
+    '/school', // 3
+    '/sponsors', // 4
+    '/boutique', // 5 👈 ajout de la boutique
+    '/contact', // 6
   ];
 
   void _onNavTapped(BuildContext context, int index) {

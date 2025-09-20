@@ -8,35 +8,48 @@ class BottomNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // largeur réservée pour le FAB central
+    const centerGap = 80.0; // 56 (FAB) + marges
+
     return BottomAppBar(
       shape: const CircularNotchedRectangle(),
       notchMargin: 6.0,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          IconButton(
-            icon: const Icon(Icons.article),
-            color: currentIndex == 1 ? Colors.red : Colors.grey,
-            onPressed: () => onTap(1),
+          // Groupe gauche (3 icônes)
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                _item(Icons.article, 1),
+                _item(Icons.event, 2),
+                _item(Icons.school, 3),
+              ],
+            ),
           ),
-          IconButton(
-            icon: const Icon(Icons.event),
-            color: currentIndex == 2 ? Colors.red : Colors.grey,
-            onPressed: () => onTap(2),
-          ),
-          const SizedBox(width: 48), // espace pour le bouton central
-          IconButton(
-            icon: const Icon(Icons.school),
-            color: currentIndex == 3 ? Colors.red : Colors.grey,
-            onPressed: () => onTap(3),
-          ),
-          IconButton(
-            icon: const Icon(Icons.handshake),
-            color: currentIndex == 4 ? Colors.red : Colors.grey,
-            onPressed: () => onTap(4),
+          const SizedBox(width: centerGap), // espace pour le FAB
+          // Groupe droit (3 icônes)
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                _item(Icons.handshake, 4),
+                _item(Icons.shopping_bag, 5),
+                _item(Icons.contact_mail, 6),
+              ],
+            ),
           ),
         ],
       ),
+    );
+  }
+
+  Widget _item(IconData icon, int idx) {
+    return IconButton(
+      icon: Icon(icon),
+      color: currentIndex == idx ? Colors.red : Colors.grey,
+      onPressed: () => onTap(idx),
+      tooltip: '$idx',
     );
   }
 }

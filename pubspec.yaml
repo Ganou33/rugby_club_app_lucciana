@@ -16,6 +16,8 @@ dependencies:
   url_launcher: ^6.3.0
   http: ^1.2.2
   html: ^0.15.4
+  intl: ^0.18.0
+  
 
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
@@ -31,6 +33,10 @@ flutter:
     - assets/sponsors/
     - assets/images/logo.png
     - assets/images/logo_circle.png
+    - assets/images/short.png
+    - assets/images/maillot.png
+    - assets/images/casquette.png
+    - assets/images/polo.png
 
 flutter_native_splash:
   color: "#B71C1C"
