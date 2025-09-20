@@ -8,6 +8,9 @@ et respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [0.3.0] - En cours de développement
 ### Ajouté
+- fix : test insertion changelog
+
+### Ajouté
 - Nouvel onglet **Contact** (📞), équilibrage de la barre de navigation (3 icônes de chaque côté du logo central).
 - Page ContactScreen avec informations fictives (version alpha).
 - Ajustement du `childAspectRatio` dans Boutique pour éviter l’overflow visuel.
