@@ -11,6 +11,8 @@ et respecte [Semantic Versioning](https://semver.org/lang/fr/).
 - Nouvel onglet **Contact** (📞), équilibrage de la barre de navigation (3 icônes de chaque côté du logo central).
 - Page ContactScreen avec informations fictives (version alpha).
 - Ajustement du `childAspectRatio` dans Boutique pour éviter l’overflow visuel.
+- Amélioration de l’onglet École de Rugby
+- Ajout des catégories dans l'école de rugby
   
 ### Modifié
 - Refonte du `BottomNav` : centrage parfait autour du FAB central.

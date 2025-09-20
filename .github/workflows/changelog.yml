@@ -3,8 +3,7 @@ name: Update Changelog and Pubspec
 on:
   push:
     branches:
-      - "0.*"
-  workflow_dispatch:
+      - "0.*"   # toutes les branches de version
 
 jobs:
   changelog:
@@ -29,5 +28,5 @@ jobs:
       - name: Commit changes
         run: |
           git add CHANGELOG.md pubspec.yaml
-          git commit -m "chore: bump version to $(cat VERSION)"
+          git commit -m "chore: update changelog for version $(cat VERSION)" || echo "No changes"
           git push
